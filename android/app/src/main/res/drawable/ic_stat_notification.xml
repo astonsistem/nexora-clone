@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Small status-bar / header icon: putih + alpha (syarat Android).
+  Mark brand Absensi (bars) — di-tint warna lewat AndroidNotificationDetails.color.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M4.5,13.5h2.4v7.5H4.5z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M8.1,10h2.4v11H8.1z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M11.7,4.5h2.4v16.5h-2.4z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M15.3,8h2.4v13h-2.4z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M18.9,11.5h2.4v9.5h-2.4z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12.9,2.2l1.5,1.5 -0.85,0.85 -0.65,-0.65 -0.65,0.65 -0.85,-0.85z" />
+</vector>

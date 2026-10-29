@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "794425582045",
+    "project_id": "hris-apg-e5d1b",
+    "storage_bucket": "hris-apg-e5d1b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794425582045:android:b5279998838fe3f82cd634",
+        "android_client_info": {
+          "package_name": "com.nexora.amazinkpeoplegroup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7TWpYG6V-IwdQ3nKHpq27HOIrIs5MUIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
