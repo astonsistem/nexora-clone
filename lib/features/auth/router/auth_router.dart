@@ -23,11 +23,33 @@ class AuthRoutes {
     ),
   ];
 
+  /// OAuth redirect URI is handled by [LoginPage] via app_links, not as a GoRoute.
+  static String? redirectFromOAuthDeepLink(GoRouterState state) {
+    final redirect = Uri.parse(EnvConfig.oauthRedirectUri);
+    final uri = state.uri;
+    if (uri.scheme == redirect.scheme && uri.host == redirect.host) {
+      return login;
+    }
+
+    final location = state.uri.toString();
+    final prefix = '${redirect.scheme}://${redirect.host}';
+    if (location.startsWith(prefix)) {
+      return login;
+    }
+
+    return null;
+  }
+
   static Future<String?> redirect(
     BuildContext context,
     GoRouterState state,
     Ref ref,
   ) async {
+    final oauthLogin = redirectFromOAuthDeepLink(state);
+    if (oauthLogin != null) {
+      return oauthLogin;
+    }
+
     final loc = state.matchedLocation;
     // Splash mengatur navigasi sendiri setelah animasi singkat.
     if (loc == splash) return null;

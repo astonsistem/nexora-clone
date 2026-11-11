@@ -24,6 +24,10 @@ final routerProvider = Provider<GoRouter>((ref) {
     initialLocation: AuthRoutes.splash,
     refreshListenable: listenable,
     redirect: (context, state) => AuthRoutes.redirect(context, state, ref),
+    onException: (context, state, router) {
+      final login = AuthRoutes.redirectFromOAuthDeepLink(state);
+      router.go(login ?? AuthRoutes.login);
+    },
     routes: [
       ...AuthRoutes.routes,
       ShellRouter.shellRoute,

@@ -87,6 +87,16 @@ class _LoginPageState extends ConsumerState<LoginPage>
     if (_isLoading) return;
 
     try {
+      if (uri.queryParameters['result'] == 'cancel') {
+        if (!mounted) return;
+        setState(() {
+          _errorMessage = 'Login dibatalkan.';
+          _openingBrowser = false;
+          _bootstrapping = false;
+        });
+        return;
+      }
+
       final code = _loginService.parseCodeFromUri(uri);
       if (code == null) return;
 
